@@ -68,3 +68,16 @@ The mean of the character vector is
 The mean of the factor vector is `r mean(vec_fac_new)`
 
 We are able to compute the mean for the factor vector but not for the character vector.
+
+## The **code chunk** below converts variables to numeric ones with an *additional* step
+
+```{r problem_1_conversion2, results = 'hide'}
+vec_char_new2 <- as.numeric((as.factor(vec_char)))
+vec_fac_new2 <- as.numeric((as.character(vec_fac)))
+```
+The mean of the factor vector is `r mean(vec_fac_new2)`
+
+The mean of the character vector is
+`r mean(vec_char_new2)`
+
+We are now able to take the mean of the new character vector but not the factor vector anymore.

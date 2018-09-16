@@ -24,21 +24,28 @@ library(tidyverse)
 set.seed(1)
 unif <- runif(10, 0, 5)
 unif[1:10]
+mean(unif)
 
 vec_logical <- c(unif)
 vec_logical > 2
+mean(vec_logical > 2)
 
 vec_char <- vector("character", length = 10)
 length(vec_char)
+mean(vec_char)
 
 vec_fac <- factor(c("male", "male", "male", "female", "male", "female", "male", "female", "male", "female"))
 length(vec_fac)
-
-
-
-
+mean(vec_fac)
 
 ```
 
+The mean of the random sample is `r mean(unif)`
 
+The mean of the logical vector is `r mean(vec_logical > 2)`
 
+The mean of the character vector is `r mean(vec_char)`
+
+The mean of the factor vector is `r mean(vec_fac)`
+
+Only the first two variables could be taken means because they have numeric values assigned whereas the last two conprise only letters and characters.

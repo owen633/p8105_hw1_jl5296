@@ -8,7 +8,7 @@ Date: 2018/09/16
 
 # Problem 1
 
-The **code chunk** below creates a *data frame* consisting of:
+##The **code chunk** below creates a *data frame* consisting of:
 
 1. A random sample of size 10 from a uniform [0, 5] distribution
 
@@ -49,3 +49,22 @@ The mean of the character vector is `r mean(vec_char)`
 The mean of the factor vector is `r mean(vec_fac)`
 
 Only the first two variables could be taken means because they have numeric values assigned whereas the last two conprise only letters and characters.
+
+## The **code chunk** below converts variables to numeric ones
+
+```{r problem_1_conversion, results = 'hide'}
+vec_logical_new <- as.numeric(vec_logical)
+vec_char_new <- as.numeric(vec_char)
+vec_fac_new <- as.numeric(vec_fac)
+```
+After conversion:
+The mean of the random sample is `r mean(unif)`
+
+The mean of the logical vector is `r mean(vec_logical_new > 2)`
+
+The mean of the character vector is
+`r mean(vec_char_new)`
+
+The mean of the factor vector is `r mean(vec_fac_new)`
+
+We are able to compute the mean for the factor vector but not for the character vector.

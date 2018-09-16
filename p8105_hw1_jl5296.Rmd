@@ -20,6 +20,24 @@ The **code chunk** below creates a *data frame* consisting of:
 
 ```{r problem_1}
 library(tidyverse)
+
+set.seed(1)
+unif <- runif(10, 0, 5)
+unif[1:10]
+
+vec_logical <- c(unif)
+vec_logical > 2
+
+vec_char <- vector("character", length = 10)
+length(vec_char)
+
+vec_fac <- factor(c("male", "male", "male", "female", "male", "female", "male", "female", "male", "female"))
+length(vec_fac)
+
+
+
+
+
 ```
 
 

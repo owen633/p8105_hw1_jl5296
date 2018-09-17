@@ -81,3 +81,25 @@ The mean of the character vector is
 `r mean(vec_char_new2)`
 
 We are now able to take the mean of the new character vector but not the factor vector anymore.
+
+
+# Problem 2
+
+##The **code chunk** below creates a *data frame* for problem2
+
+```{r problem_2_df}
+library(tidyverse)
+set.seed(123)
+
+p2_df = tibble(
+  x = rnorm(1000),
+  y = rnorm(1000),
+  vec_log2 = c(x + y > 0),
+  vec_num2 = as.numeric(vec_log2),
+  vec_fac2 = as.factor(vec_log2)
+)
+  
+
+
+
+```

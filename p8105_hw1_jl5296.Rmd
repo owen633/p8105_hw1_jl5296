@@ -98,8 +98,20 @@ p2_df = tibble(
   vec_num2 = as.numeric(vec_log2),
   vec_fac2 = as.factor(vec_log2)
 )
-  
-
-
 
 ```
+* The size of
+  
+  "x" is `r dim.data.frame(p2_df$x)`
+  
+  "y" is `r dim.data.frame(p2_df$y)`
+  
+  logical vector is `r dim.data.frame(p2_df$vec_log2)`
+  
+  numeric vector is `r dim.data.frame(p2_df$vec_num2)`
+  
+  factor vector is `r dim.data.frame(p2_df$vec_fac2)`
+
+* The mean and median of "x" are `r mean(p2_df$x)` and `r median(p2_df$x)` repectively.
+
+* The proportion of cases for which the logical vector is TRUE is equal to `r table(p2_df$vec_log2)["TRUE"] / length(p2_df$vec_log2)`

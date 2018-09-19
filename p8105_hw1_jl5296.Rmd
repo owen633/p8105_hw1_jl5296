@@ -127,4 +127,4 @@ ggplot(p2_df, aes(x = x, y = y, color = vec_fac2 )) + geom_point()
 ggsave("savePlot.pdf", plot = save_plot)
 
 ```
-
+Looking at the scatterplots, the dots that lie above y = -x are "TRUE" for x + y > 0; while the dots that lie below y = -x are "FALSE" for x + y > 0

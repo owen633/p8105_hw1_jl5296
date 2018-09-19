@@ -118,13 +118,13 @@ p2_df = tibble(
 ## The code chunk below displays scatterplots of variables "y" vs. "x" with different color points
 
 ```{r yx_scatter}
-ggplot(p2_df, aes(x = x, y = y, color = vec_log2 )) + geom_point()
+save_plot = ggplot(p2_df, aes(x = x, y = y, color = vec_log2 )) + geom_point()
 
 ggplot(p2_df, aes(x = x, y = y, color = vec_num2 )) + geom_point()
 
 ggplot(p2_df, aes(x = x, y = y, color = vec_fac2 )) + geom_point()
 
-
+ggsave("savePlot.pdf", plot = save_plot)
 
 ```
 

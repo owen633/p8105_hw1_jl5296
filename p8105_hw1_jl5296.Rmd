@@ -88,7 +88,6 @@ We are now able to take the mean of the new character vector but not the factor 
 ##The **code chunk** below creates a *data frame* for problem2
 
 ```{r problem_2_df}
-library(tidyverse)
 set.seed(123)
 
 p2_df = tibble(
@@ -115,3 +114,17 @@ p2_df = tibble(
 * The mean and median of "x" are `r mean(p2_df$x)` and `r median(p2_df$x)` repectively.
 
 * The proportion of cases for which the logical vector is TRUE is equal to `r table(p2_df$vec_log2)["TRUE"] / length(p2_df$vec_log2)`
+
+## The code chunk below displays scatterplots of variables "y" vs. "x" with different color points
+
+```{r yx_scatter}
+ggplot(p2_df, aes(x = x, y = y, color = vec_log2 )) + geom_point()
+
+ggplot(p2_df, aes(x = x, y = y, color = vec_num2 )) + geom_point()
+
+ggplot(p2_df, aes(x = x, y = y, color = vec_fac2 )) + geom_point()
+
+
+
+```
+
